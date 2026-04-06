@@ -1,8 +1,28 @@
 import Link from "next/link";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Reverie",
+  description:
+    "Journal de reves intelligent. Capturez, interpretez et illustrez vos reves avec l'intelligence artificielle.",
+  url: "https://reverie-web.vercel.app",
+  applicationCategory: "HealthApplication",
+  operatingSystem: "All",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "CAD",
+  },
+};
+
 export default function LandingPage() {
   return (
     <div className="min-h-dvh">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Nav */}
       <nav className="flex items-center justify-between px-6 py-4 max-w-5xl mx-auto">
         <div className="flex items-center gap-2">

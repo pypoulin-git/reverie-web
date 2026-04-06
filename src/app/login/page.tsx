@@ -16,11 +16,14 @@ export default function LoginPage() {
     return null;
   }
 
+  const getOrigin = () =>
+    typeof window !== "undefined" ? window.location.origin : "";
+
   const signInWithGoogle = async () => {
     const supabase = createClient();
     await supabase.auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo: `${window.location.origin}/auth/callback` },
+      options: { redirectTo: `${getOrigin()}/auth/callback` },
     });
   };
 
@@ -30,7 +33,7 @@ export default function LoginPage() {
     const supabase = createClient();
     const { error } = await supabase.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
+      options: { emailRedirectTo: `${getOrigin()}/auth/callback` },
     });
     if (error) {
       setError("Une erreur est survenue. Reessayez.");
