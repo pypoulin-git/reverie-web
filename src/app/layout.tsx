@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { ViewTransition } from "react";
 import { Nunito, Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -51,7 +52,9 @@ export default function RootLayout({
       lang="fr"
       className={`${nunito.variable} ${poppins.variable} h-full`}
     >
-      <body className="min-h-dvh flex flex-col antialiased">{children}</body>
+      <body className="min-h-dvh flex flex-col antialiased">
+        <ViewTransition>{children}</ViewTransition>
+      </body>
     </html>
   );
 }
