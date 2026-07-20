@@ -201,6 +201,8 @@ export default function LandingPage() {
           </div>
           <div className="flex items-center gap-4 text-xs" style={{ color: "var(--text-muted)" }}>
             <Link href="/blog">Blog</Link>
+            <Link href="/privacy">Confidentialite</Link>
+            <Link href="/terms">Conditions</Link>
             <a
               href="https://ciel-natal.vercel.app"
               target="_blank"
