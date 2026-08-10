@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/app/", "/api/", "/auth/"],
       },
     ],
-    sitemap: "https://reverie-web.vercel.app/sitemap.xml",
+    sitemap: "https://reverie-web-gamma.vercel.app/sitemap.xml",
   };
 }
