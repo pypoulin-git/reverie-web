@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { BLOG_ARTICLES } from "@/data/blog-articles";
 
-const BASE_URL = "https://reverie-web.vercel.app";
+const BASE_URL = "https://reverie-web-gamma.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogEntries = BLOG_ARTICLES.map((article) => ({
